@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Notice.js</title>
+    <title>hjnotice</title>
     <meta name="description" content="A clean and simple message plugin, with no dependencies.">
     <script src="notice.js"></script>
     <link rel="stylesheet" href="notice.css">
@@ -50,9 +50,8 @@
             <button id="error" class="error">Error Message</button>
             <button id="info" class="info">Info Message</button>
 
-            <button id="hide">Show &amp; Hide</button>
-            <button id="link">Link Message</button>
-            <button id="callback">Callback Message</button>
+            <button id="hide">stay message</button>
+            <button id="callback">Callback</button>
         </div>
         <p>
             <a href="https://github.com/lwyj123/hjnotice">Docs on GitHub</a>
@@ -86,20 +85,12 @@
 
         // set time to hide it
         $('hide').onclick = function() {
-            notice.success('This message will hide in 2 seconds', 2000);
-        };
-
-        // add link to a message
-        $('link').onclick = function() {
-            notice.success({
-                message: 'Click on this message',
-                url: 'http://arvinxiang.com/'
-            });
+            notice.success({message:'A success message', duration:0});
         };
 
         // callback when closed
         $('callback').onclick = function() {
-            notice.success('A callback message', function(){
+            notice.success({message:'A info message', duration:1000}, function(){
                 alert('callback function');
             });
         };

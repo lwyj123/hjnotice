@@ -17,6 +17,12 @@ var hjnotice = function(){
             warning: 'warning',
             error: 'error',
             info: 'info'
+        },
+        _POSITION = {
+            top: 'top',
+            right: 'right',
+            bottom: 'bottom',
+            left: 'left',
         }
     ;
     var _ICONSRC = {
@@ -29,6 +35,10 @@ var hjnotice = function(){
     function Notice(options) {
         var elem = createElement(options);
         elem.id = 'hjnotice-' + (_COUNT++);
+        this.position = options.position || 'right';
+        if(!this.position in _POSITION) {
+            this.position = 'right'
+        }
         this.elem = elem;
     }
 
@@ -36,10 +46,11 @@ var hjnotice = function(){
         if (document.getElementById(this.elem.id)) return;
 
         // create notice container
-        var container = document.querySelector('.hjnotice-container');
+        var container = document.querySelector('.hjnotice-container'+'.'+this.position);
         if (!container) {
             container = document.createElement('div');
-            container.className = 'hjnotice-container';
+            container.classList.add('hjnotice-container')
+            container.classList.add(this.position)
             document.body.appendChild(container);
         }
         container.appendChild(this.elem);

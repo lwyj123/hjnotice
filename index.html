@@ -68,29 +68,29 @@
         function $(id) { return document.getElementById(id) };
         // notice.success for a success message
         $('success').onclick = function() {
-            notice.success({message:'A success message', duration:1000});
+            hjnotice.success({message:'A success message', duration:1000});
         };
         // notice.warning for a warning message
         $('warning').onclick = function() {
-            notice.warning({message:'A warning message', duration:1000});
+            hjnotice.warning({message:'A warning message', duration:1000});
         };
         // notice.error for a error message
         $('error').onclick = function() {
-            notice.error({message:'A error message', duration:1000});
+            hjnotice.error({message:'A error message', duration:1000});
         };
         // notice.info for a info message
         $('info').onclick = function() {
-            notice.info({message:'A info message', duration:1000});
+            hjnotice.info({message:'A info message', duration:1000});
         };
 
         // set time to hide it
         $('hide').onclick = function() {
-            notice.success({message:'A success message', duration:0});
+            hjnotice.success({message:'A success message', duration:0});
         };
 
         // callback when closed
         $('callback').onclick = function() {
-            notice.success({message:'A info message', duration:1000}, function(){
+            hjnotice.success({message:'A info message', duration:1000}, function(){
                 alert('callback function');
             });
         };

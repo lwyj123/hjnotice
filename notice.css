@@ -1,7 +1,8 @@
 .hjnotice-container {
     position: fixed;
-    top: 10%;
-    right: 0;
+    top: 60%;
+    right: 50%;
+    margin-right: -175px;
     width: 350px;
     z-index: 100;
 }

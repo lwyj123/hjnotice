@@ -8,7 +8,7 @@
  * Copyright © 2016 by Arvin Xiang.
  */
 
-var notice = function(){
+var hjnotice = function(){
 
     var _COUNT = 0,
         currentType,

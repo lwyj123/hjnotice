@@ -52,6 +52,11 @@
 
             <button id="hide">stay message</button>
             <button id="callback">Callback</button>
+
+            <button id="callback">top</button>
+            <button id="callback">right</button>
+            <button id="callback">bottom</button>
+            <button id="callback">left</button>
         </div>
         <p>
             <a href="https://github.com/lwyj123/hjnotice">Docs on GitHub</a>
@@ -93,6 +98,18 @@
             hjnotice.success({message:'A info message', duration:1000}, function(){
                 alert('callback function');
             });
+        };
+        $('info').onclick = function() {
+            hjnotice.info({message:'A top message', duration:1000, position: 'top'});
+        };
+        $('info').onclick = function() {
+            hjnotice.info({message:'A right message', duration:1000, position: 'right'});
+        };
+        $('info').onclick = function() {
+            hjnotice.info({message:'A bottom message', duration:1000, position: 'bottom'});
+        };
+        $('info').onclick = function() {
+            hjnotice.info({message:'A left message', duration:1000, position: 'left'});
         };
     </script>
 </body>

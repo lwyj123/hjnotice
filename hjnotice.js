@@ -1,11 +1,11 @@
 /**
- * Notice.js v0.0.1
+ * hjnotice v1.0.0
  *
  * A clean and simple message plugin, with no dependencies.
  *
- * https://github.com/xiangming/notice.js
+ * https://github.com/lwyj123/hjnotice
  *
- * Copyright © 2016 by Arvin Xiang.
+ * Copyright © 2017 by lwio, Arvin Xiang.
  */
 
 var hjnotice = function(){

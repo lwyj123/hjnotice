@@ -113,7 +113,20 @@ var hjnotice = function(){
 
     function notify(...args) {
         var options = {}, callback;
-
+        var item;
+        if(Object.prototype.toString.call(args[0]).slice(8, -1) === 'String') {
+            item = new Notice({
+                message: args[0], 
+                callback: null, 
+                type: currentType,
+                duration: 1000,
+            })
+            item.show();
+            setTimeout(function() {
+                item.clear();
+            }, 1000);
+            return;
+        }
         if ( !args[0] || (typeof args[0] !== 'object') ) return;
         // notice.success({message: 'a message', duration: 2000})
         // notice.success({message: 'a message', duration: 2000}, function(){...})
@@ -126,7 +139,7 @@ var hjnotice = function(){
         currentType = undefined;
 
         var time = options.duration;
-        var item = new Notice(options);
+        item = new Notice(options);
         item.show();
 
         // only auto hide when duration is set

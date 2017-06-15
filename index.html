@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hjnotice</title>
     <meta name="description" content="A clean and simple message plugin, with no dependencies.">
-    <script src="notice.js"></script>
-    <link rel="stylesheet" href="notice.css">
+    <script src="hjnotice.js"></script>
+    <link rel="stylesheet" href="hjnotice.css">
     <style>
         html, body {
             margin: 0;
@@ -45,6 +45,8 @@
     <div class="container">
         <h1>hjnotice</h1>
         <div class="buttons">
+            <button id="simple">simple</button>  
+
             <button id="success" class="success">Success Message</button>
             <button id="warning" class="warning">Warning Message</button>
             <button id="error" class="error">Error Message</button>
@@ -53,10 +55,10 @@
             <button id="hide">stay message</button>
             <button id="callback">Callback</button>
 
-            <button id="callback">top</button>
-            <button id="callback">right</button>
-            <button id="callback">bottom</button>
-            <button id="callback">left</button>
+            <button id="top">top</button>
+            <button id="right">right</button>
+            <button id="bottom">bottom</button>
+            <button id="left">left</button>
         </div>
         <p>
             <a href="https://github.com/lwyj123/hjnotice">Docs on GitHub</a>
@@ -71,6 +73,9 @@
 
     <script>
         function $(id) { return document.getElementById(id) };
+        $('simple').onclick = function() {
+            hjnotice.success('simple test');
+        }
         // notice.success for a success message
         $('success').onclick = function() {
             hjnotice.success({message:'A success message', duration:1000});
@@ -99,16 +104,16 @@
                 alert('callback function');
             });
         };
-        $('info').onclick = function() {
+        $('top').onclick = function() {
             hjnotice.info({message:'A top message', duration:1000, position: 'top'});
         };
-        $('info').onclick = function() {
+        $('right').onclick = function() {
             hjnotice.info({message:'A right message', duration:1000, position: 'right'});
         };
-        $('info').onclick = function() {
+        $('bottom').onclick = function() {
             hjnotice.info({message:'A bottom message', duration:1000, position: 'bottom'});
         };
-        $('info').onclick = function() {
+        $('left').onclick = function() {
             hjnotice.info({message:'A left message', duration:1000, position: 'left'});
         };
     </script>

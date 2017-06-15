@@ -18,7 +18,7 @@ The first argument can be either a string(message) or an options object. The onl
 
 - `message` - the string you wanna show.
 - `duration` - notice hide after `duration` mileseconds. if duration not set or set 0, the notice will not hide automatically
-- `position` - set the notice's position, you can set position to `top`, `right`, 'bottom', 'left'. the default is `right`
+- `position` - set the notice's position, you can set position to `top`, `right`, `bottom`, `left`. the default is `right`
 
 `callback` a callback function running when trigger DOMNodeRemoved(removed)  
 

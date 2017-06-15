@@ -2,9 +2,11 @@
 a light web notice component(no dependencies)
 
 ## Install
-
-```javascript
+```html
+<link rel="stylesheet" href="hjnotice.css">
+<!-- -->
 <script src="hjnotice.js"></script>
+
 ```
 
 ## Usage

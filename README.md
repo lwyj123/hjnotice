@@ -32,7 +32,7 @@ same as success, but the style is for error
 
 same as success, but the style is for warnning
 
-##Example
+## Example
 
 ```js
 hjnotice.success({message:'A success message', duration:0, position: 'bottom'});

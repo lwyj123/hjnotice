@@ -37,5 +37,7 @@ same as success, but the style is for warnning
 ## Example
 
 ```js
+hjnotice.success('simple');
+
 hjnotice.success({message:'A success message', duration:0, position: 'bottom'});
 ```
